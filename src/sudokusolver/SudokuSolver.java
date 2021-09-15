@@ -6,25 +6,22 @@
 package sudokusolver;
 
 /**
- *
  * @author Matthew
  */
 public class SudokuSolver {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
 
         // set up grid
         Gamestate gamestate1 = new Gamestate();
-        //gamestate1.setStartingState(StartingNumbers.RIXX_CHALLENGE());
-        //gamestate1.setStartingState(StartingNumbers.PLATE_CHALLENGE());
-        //gamestate1.setStartingState(StartingNumbers.INVALID_CHALLENGE()); // - DOESNT ERROR OUT, SOMEHOW COMPLETES!?
-        //gamestate1.setStartingState(StartingNumbers.SINGLE_SQUARE_CHALLENGE());
-        //gamestate1.setStartingState(StartingNumbers.UNSOLVABLE_CHALLENGE());
-        gamestate1.setStartingState(StartingNumbers.MULTIPLE_OUTCOME_CHALLENGE());
+        
+        // ### ENABLE ONE OF THE BELOW CHALLENGES AND CLICK RUN ###
+        
+        gamestate1.setStartingState(StartingNumbers.CHALLENGE_ONE());
+        //gamestate1.setStartingState(StartingNumbers.CHALLENGE_TWO());
+        //gamestate1.setStartingState(StartingNumbers.CHALLENGE_THREE());
+        //gamestate1.setStartingState(StartingNumbers.INVALID_CHALLENGE()); // - CORRECTLY CALLS INVALID
+                
 
         // display grid
         gamestate1.displayCellArray();
